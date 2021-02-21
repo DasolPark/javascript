@@ -73,10 +73,8 @@ const numberFive = 5;
 
 // == loose equality, with type conversion
 console.log(stringFive == numberFive);
-console.log(stringFive === numberFive);
 
 // === strict equality, with type conversion
-console.log(stringFive == numberFive);
 console.log(stringFive === numberFive);
 
 // object equality by reference
