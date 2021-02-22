@@ -164,7 +164,7 @@ function calculate(command, a, b) {
     case 'remainder':
       return a % b;
     default:
-      break;
+      throw Error('unknown command');
   }
 }
 
@@ -173,3 +173,4 @@ console.log(calculate('substract', 3, 1)); // 2
 console.log(calculate('divide', 8, 2)); // 4
 console.log(calculate('multiply', 2, 5)); // 10
 console.log(calculate('remainder', 5, 2)); // 1
+console.log(calculate('hey', 2, 5));
