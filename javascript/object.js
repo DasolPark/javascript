@@ -1,10 +1,11 @@
+'use strict';
 // Objects
 // one of the JavaScript's data types
 // a collection of related data and/or functionality
 // Nearly all objects in JavaScript are instances of Object
 
 // 1. Literals and properties
-const obj1 = {}; // 'object literal' syntax
+const obj1 = {}; // object initializer/literal syntax
 const obj2 = new Object(); // 'object constructor' syntax
 
 function print(person) {
@@ -60,14 +61,14 @@ console.log(david.random);
 // 6. for..in VS for..of
 // for (key in obj)
 console.clear();
-for (key in david) {
+for (const key in david) {
   console.log(key);
   console.log(david[key]);
 }
 
 // for (value of iterable)
 const arr = [2, 3, 5, 8];
-for (value of arr) {
+for (const value of arr) {
   console.log(value);
 }
 
@@ -80,7 +81,7 @@ console.log(user);
 
 // old way
 const user3 = {};
-for (key in user) {
+for (const key in user) {
   user3[key] = user[key];
 }
 console.clear();
