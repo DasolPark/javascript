@@ -4,7 +4,7 @@ class UserStorage {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (
-          (id === 'david' && password === 'dream') ||
+          (id === 'david' && password === 'park') ||
           (id === 'coder' && password === 'academy')
         ) {
           resolve(id);
@@ -44,3 +44,17 @@ userStorage
 //   .then(userStorage.getRoles)
 //   .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
 //   .catch(error => console.log(error));
+
+// Home work
+// change promise of last userStorage instance to async/await
+
+async function consoleUserRole(id, password) {
+  const userId = await userStorage.loginUser(id, password);
+  const userRole = await userStorage.getRoles(userId);
+
+  return userRole;
+}
+
+consoleUserRole(id, password)
+  .then(roleObj => console.log(roleObj))
+  .catch(error => console.log(error));
